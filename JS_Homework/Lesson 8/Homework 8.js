@@ -22,9 +22,10 @@ function Animal(name) {
     };
 
     this.name = name;
+    var self = this;
 
     this.feed = function() {
-        console.log( 'Насыпаем в миску ' + this.dailyNorm() + ' корма.' );
+        console.log( 'Насыпаем в миску ' + self.dailyNorm() + ' корма.' );
     };
 }
 
@@ -33,7 +34,7 @@ function Cat() {
 
     var animalFeed = this.feed;
     this.feed = function () {
-        animalFeed.call(this, arguments);
+        animalFeed();
         console.log( 'Кот доволен ^_^.' );
         return this;
     }
@@ -44,18 +45,10 @@ function Cat() {
     };
 }
 
-
 var barsik = new Cat( 'Барсик' );
 
-console.log(barsik.name)
-
-console.log(barsik.dailyNorm(250))
+console.log(barsik.name);
 barsik.feed().stroke().feed().stroke();
-
-
-console.log(barsik.dailyNorm(800));
-barsik.feed().stroke().feed().stroke();
-
 barsik = null;
 
 
