@@ -10,12 +10,8 @@ function Animal(name) {
     this.dailyNorm = function(amount) {
         if (!arguments.length) return formatFoodAmount();
 
-        if (amount < 50) {
-            return 'Недостаточное количество корма.';
-        }
-
-        if (amount > 500) {
-            return 'Количество корма превышено.';
+        if (amount < 50 || amount > 500) {
+            return 'Недопустимое количество корма.';
         }
 
         foodAmount = amount;
@@ -45,7 +41,7 @@ function Cat() {
     };
 }
 
-var barsik = new Cat( 'Барсик' );
+var barsik = new Cat( 'Barsik' );
 
 console.log(barsik.name);
 barsik.feed().stroke().feed().stroke();
