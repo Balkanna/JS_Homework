@@ -25,7 +25,7 @@ console.log(timesString); // Текущее время : 00 : 13 : 24
 
 function getCount(str) {
     str = str.toLowerCase();
-    var vowels = 'aeiou';
+    var vowels = 'aeiouy';
     var count = 0;
     for (var i = 0; i < str.length; i++) {
         if (vowels.indexOf(str[i]) > -1) {
