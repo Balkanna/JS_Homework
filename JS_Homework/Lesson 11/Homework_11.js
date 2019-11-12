@@ -36,7 +36,7 @@ function getCount(str) {
 }
 
 var result = getCount('Function');
-console.log(result);
+console.log(result);//3
 
 /*Задание 4:
 Написать функцию, которая будет принимать текст в качестве параметра. У текста должны быть пробелы, точки, запятые,
