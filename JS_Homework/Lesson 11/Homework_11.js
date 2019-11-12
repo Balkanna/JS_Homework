@@ -46,10 +46,13 @@ console.log(result);
 и т.д. - именно букв).*/
 
 function countLetters(text) {
-    var string = text.split(/[!.?]\s*/).filter(function(item){return item!==''}).forEach(function(item) {
-		console.log(item + ' (' +'всего букв: ' + item.split(/[\s,.:;-]/).join('').length + ')');
-	})
+    var string = text.split(/[!.?]\s*/).filter(function(item) {
+	return item!=='';
+    }).forEach(function(item) {
+	console.log(item + ' (' +'всего букв: ' + item.split(/[\s,.:;-]/).join('').length + ')');
+    });
 }
+
 countLetters('Парус. Белеет парус одинокой в тумане моря голубом! Что ищет он в стране далекой? Что кинул он в краю родном? Играют волны - ветер свищет, и мачта гнется и скрипит. Увы! Он счастия не ищет и не от счастия бежит!')
 
 //Парус (всего букв: 5)
