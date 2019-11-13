@@ -49,7 +49,7 @@ function countLetters(text) {
     var string = text.split(/[!.?]\s*/).filter(function(item) {
 	return item !== '';
     }).forEach(function(item) {
-	console.log(item + ' (' +'всего букв: ' + item.split(/[\s,.:;-]/).join('').length + ')');
+	console.log(item + '. (' +'всего букв: ' + item.split(/[\s,.:;-]/).join('').length + ')');
     });
 }
 
