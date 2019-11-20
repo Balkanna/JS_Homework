@@ -25,7 +25,7 @@ console.log(timesString); // Текущее время : 00 : 13 : 24
 
 function getCount(str) {
     str = str.toLowerCase();
-    var vowels = 'aeiou';
+    var vowels = 'aeiouy';
     var count = 0;
     for (var i = 0; i < str.length; i++) {
         if (vowels.indexOf(str[i]) > -1) {
@@ -36,7 +36,7 @@ function getCount(str) {
 }
 
 var result = getCount('Function');
-console.log(result);
+console.log(result);//3
 
 /*Задание 4:
 Написать функцию, которая будет принимать текст в качестве параметра. У текста должны быть пробелы, точки, запятые,
@@ -46,22 +46,20 @@ console.log(result);
 и т.д. - именно букв).*/
 
 function countLetters(text) {
-    var string = text.split(/[!.?]/);
-    string.splice(length + 1, 1);
-    var letters = string.map(function(item) {
-        item = item.trim().split(/[ ,:;]/)
-        return item.reduce(function(sum, el) {
-            return sum + el.length
-        }, 0)
-    })
-    for (i = 0; i < string.length; i++) {
-        console.log(string[i] + ' (всего букв: ' + letters[i] + ')');
-    }
+    var string = text.split(/[!.?]\s*/).filter(function(item) {
+	return item !== '';
+    }).forEach(function(item) {
+	console.log(item + '. (' +'всего букв: ' + item.split(/[\s,.:;-]/).join('').length + ')');
+    });
 }
 
-countLetters('Парус. Белеет парус одинокой в тумане моря голубом! Что ищет он в стране далекой? Что кинул он в краю родном?');
+countLetters('Парус. Белеет парус одинокой в тумане моря голубом! Что ищет он в стране далекой? Что кинул он в краю родном? Играют волны - ветер свищет, и мачта гнется и скрипит. Увы! Он счастия не ищет и не от счастия бежит!')
+
 //Парус (всего букв: 5)
 //Белеет парус одинокой в тумане моря голубом (всего букв: 37)
 //Что ищет он в стране далекой (всего букв: 23)
 //Что кинул он в краю родном (всего букв: 21)
+//Играют волны - ветер свищет, и мачта гнется и скрипит (всего букв: 42)
+//Увы (всего букв: 3)
+//Он счастия не ищет и не от счастия бежит (всего букв: 32)
 
