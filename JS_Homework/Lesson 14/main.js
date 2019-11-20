@@ -70,7 +70,7 @@ function drawField(x, y) {
         for (var fieldCell = 1; fieldCell <= x; fieldCell++) {
             var cell = document.createElement("div");
             cell.classList.add("field__cell");
-            if ((fieldRow + 1 + fieldCell) % 2 !== 0) {
+            if ((fieldRow + fieldCell) % 2 !== 0) {
                 cell.classList.add("black");
             }
             row.appendChild(cell);
