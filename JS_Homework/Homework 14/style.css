@@ -1,0 +1,30 @@
+.field__cell {
+    width: 50px;
+    height: 50px;
+    border: 1px solid;
+    box-sizing: border-box;
+}
+
+.field__row {
+    display: flex;
+}
+
+.black {
+    background: #000;
+}
+
+.container {
+    margin-bottom: 10px;
+}
+
+.input-field {
+    margin-bottom: 10px;
+}
+
+button {
+    margin-left: 19px;
+}
+
+.field {
+    margin-left: 19px;
+}
