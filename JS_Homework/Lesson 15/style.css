@@ -1,0 +1,26 @@
+table {
+    border-collapse: collapse;
+    width: 500px;
+    table-layout: fixed;
+}
+
+td {
+    height: 50px;
+    border: 1px solid;
+    text-align: center;
+    padding: 5px 10px;
+}
+
+td input {
+    width: 100%;
+}
+
+button {
+    padding: 5px 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: white;
+    border: none;
+    outline: none;
+}
+
