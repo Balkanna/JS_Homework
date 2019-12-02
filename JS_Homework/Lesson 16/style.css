@@ -1,0 +1,59 @@
+body {
+    background-color: gray;
+    font: 16px Arial sans-serif;
+}
+
+button {
+    position: absolute;
+    right: 290px;
+    top: 56px;
+    background-color: springgreen;
+    padding: 5px;
+}
+
+.main-block {
+    margin: 50px 10px 30px 100px;
+}
+
+.info-blocks {
+    display: flex;
+    background-color: white;
+    border-radius: 0 10px 10px 10px;
+    margin-right: 390px;
+}
+
+.tab-item{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: springgreen;
+    border-radius: 10px 10px 0 0;
+    margin-right: 7px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.tab-item.active{
+    background-color: white;
+    color: black;
+}
+
+.tab-info {
+    padding: 125px;
+    margin-right: 360px;
+    background-color: springgreen;
+    border-radius: 0 10px 10px 10px;
+}
+
+img {
+    padding: 28px;
+}
+
+.info-blocks p {
+    font-size: 18px;
+    font-style: italic;
+}
+
+.info-blocks p:first-child {
+    padding-top: 40px;
+}
