@@ -16,7 +16,7 @@ btn.addEventListener('click', function () {
 
     var xhr = new XMLHttpRequest();
     xhr.open('GET', 'https://reqres.in/api/users?page=2', true);
-    xhr.send(); //отправка запроса на сервер
+    xhr.send();
 
     xhr.onload = function() {
         var statusType = +String(this.status)[0];
@@ -34,7 +34,7 @@ function draw() {
     }
     var tabItems = document.getElementsByClassName('tab-item');
     tabItems[0].classList.add('active');
-    insertContentIntoTabContentDiv(users[0]);//вставляем контент для перваого юзера
+    insertContentIntoTabContentDiv(users[0]);
 }
 
 tabsContainer.addEventListener('click', function (event) {
