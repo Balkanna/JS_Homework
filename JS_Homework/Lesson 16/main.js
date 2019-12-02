@@ -49,8 +49,7 @@ tabsContainer.addEventListener('click', function (event) {
 
         insertContentIntoTabContentDiv(targetUserInUsersArray[0])
     }
-
-})
+});
 
 function drawTabs(tabNumber, userId) {
     var tab = document.createElement('div');
